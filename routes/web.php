@@ -1,12 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\TarefaController;
 
+Route::get('/', [TarefaController::class, 'index']);
 
-/**
- * Adicione e modifique rotas conforme necessário
- */
+Route::resource('tarefas', TarefaController::class);
 
-Route::get('/', [TarefaController::class, 'index']); 
